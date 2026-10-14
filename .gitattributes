@@ -1,0 +1,22 @@
+# Normaliza as quebras de linha (evita conflitos entre Windows e Linux)
+* text=auto eol=lf
+
+# Melhora a exibição de diferenças no GitHub
+*.blade.php diff=html
+*.css diff=css
+*.html diff=html
+*.md diff=markdown
+*.php diff=php
+
+# Arquivos binários (não alterar nem comparar como texto)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.docx binary
+*.xlsx binary
+*.zip binary
+*.woff binary
+*.woff2 binary
