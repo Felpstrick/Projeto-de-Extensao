@@ -56,53 +56,8 @@ Uma plataforma web em que o aluno escolhe o material em um catálogo, paga por P
 | Front-end | HTML, CSS, JavaScript, Blade e [Bootstrap 5](https://getbootstrap.com) |
 | Banco de dados | MySQL |
 | Pagamentos | Gateway com Pix (Mercado Pago ou Asaas, a definir) |
-| Ambiente local | XAMPP, Composer, Git |
+| Ambiente local | Laragon, Composer, Git |
 | Organização | Trello (tarefas) e Canva (protótipos) |
-
----
-
-## Como executar localmente
-
-### Pré-requisitos
-
-- [XAMPP](https://www.apachefriends.org) (Apache, MySQL e phpMyAdmin) com PHP 8.2 ou superior
-- [Composer](https://getcomposer.org)
-- [Git](https://git-scm.com)
-
-### Passo a passo
-
-```bash
-# 1. Clone o repositório
-git clone <url-do-repositorio>
-cd <nome-da-pasta>
-
-# 2. Instale as dependências
-composer install
-
-# 3. Crie o arquivo de ambiente
-cp .env.example .env
-
-# 4. Gere a chave da aplicação
-php artisan key:generate
-```
-
-5. Crie um banco de dados no phpMyAdmin e configure no arquivo `.env` a conexão com o MySQL e as chaves do gateway de pagamento (use o **ambiente de testes**).
-
-```bash
-# 6. Execute as migrações
-php artisan migrate
-
-# 7. Inicie o servidor
-php artisan serve
-```
-
-Acesse `http://localhost:8000` no navegador.
-
-> **Atenção:** o arquivo `.env` contém senhas e chaves e **não deve ser enviado ao GitHub**.
-
-### Testando a confirmação de pagamento
-
-A confirmação automática depende de o gateway acessar o sistema. Em ambiente local, use uma ferramenta de túnel, como [ngrok](https://ngrok.com) ou Cloudflare Tunnel, para expor o servidor temporariamente.
 
 ---
 
