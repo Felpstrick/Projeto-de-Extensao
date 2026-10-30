@@ -1,9 +1,207 @@
+
 @import 'tailwindcss';
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif,
+        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+        'Noto Color Emoji';
+}
+
+/* ===== CARTÃO DE LOGIN ===== */
+
+.card {
+    background-color: rgba(255, 255, 255, 0.97);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 18px;
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.13),
+        0 4px 12px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+/* Efeito flutuante discreto */
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 20px 48px rgba(0, 0, 0, 0.16),
+        0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+/* ===== CABEÇALHO ===== */
+
+.card-header {
+    background: transparent;
+    border: none;
+    padding: 28px 28px 0;
+}
+
+.card-header h3 {
+    color: #315b40;
+    font-size: 27px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin: 0;
+}
+
+/* ===== LINHAS DIVISÓRIAS ===== */
+
+.card hr {
+    border: 0;
+    border-top: 1px solid #dfe7df;
+    opacity: 1;
+    margin: 22px 0;
+}
+
+/* ===== ÁREA DO FORMULÁRIO ===== */
+
+.card-body {
+    padding: 10px 28px 28px;
+}
+
+/* Textos dos campos */
+
+.card .form-label {
+    color: #354b3b;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+/* Campos de e-mail e senha */
+
+.card .form-control {
+    min-height: 46px;
+    padding: 12px 14px;
+    background-color: #f8faf8;
+    border: 1px solid #d9e2d9;
+    border-radius: 10px;
+    color: #263b2d;
+    font-size: 14px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.card .form-control::placeholder {
+    color: #9aa79d;
+    opacity: 1;
+}
+
+/* Ao passar o mouse */
+
+.card .form-control:hover {
+    border-color: #a8c0a8;
+}
+
+/* Ao selecionar um campo */
+
+.card .form-control:focus {
+    background-color: #ffffff;
+    border-color: #5e8d6b;
+    box-shadow: 0 0 0 3px rgba(94, 141, 107, 0.16);
+    outline: none;
+}
+
+/* ===== LINKS ===== */
+
+.card a {
+    color: #36734a;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.card a:hover {
+    color: #234d30;
+    text-decoration: underline;
+}
+
+/* Link "Esqueceu sua senha?" */
+
+.card p.text-end {
+    font-size: 13px !important;
+    margin-top: 0;
+}
+
+/* Texto de cadastro */
+
+.card p.text-center {
+    color: #657267;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* ===== BOTÃO ENTRAR ===== */
+
+.card .btn-success {
+    min-height: 46px;
+    background-color: #3b8664;
+    border: 1px solid #3b8664;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+
+    box-shadow: 0 4px 10px rgba(59, 134, 100, 0.18);
+
+    transition:
+        background-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.card .btn-success:hover {
+    background-color: #2f7052;
+    border-color: #2f7052;
+    box-shadow: 0 6px 14px rgba(59, 134, 100, 0.25);
+    transform: translateY(-1px);
+}
+
+.card .btn-success:active {
+    background-color: #285f45;
+    border-color: #285f45;
+    transform: translateY(0);
+}
+
+/* ===== RESPONSIVIDADE DO CARTÃO ===== */
+
+@media (max-width: 768px) {
+    .card {
+        border-radius: 16px;
+    }
+
+    .card-header {
+        padding: 24px 22px 0;
+    }
+
+    .card-header h3 {
+        font-size: 24px;
+    }
+
+    .card-body {
+        padding: 10px 22px 24px;
+    }
+}
+
+/* ===== ACESSIBILIDADE ===== */
+
+@media (prefers-reduced-motion: reduce) {
+    .card,
+    .card .form-control,
+    .card .btn-success,
+    .card a {
+        transition: none;
+    }
+
+    .card:hover,
+    .card .btn-success:hover {
+        transform: none;
+    }
 }
