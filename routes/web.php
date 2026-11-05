@@ -13,6 +13,10 @@ route::middleware('guest')->group(function () {
     route::post('/login', [loginController::class, 'login']);
 });
 
+route::middleware('auth')->group(function () {
+    route::post('/logout', [loginController::class, 'logout'])->name('logout');
+});
+
 
 //invoca controller da dashboard, com autenticação
 Route::get('/dashboard', DashboardController::class)
