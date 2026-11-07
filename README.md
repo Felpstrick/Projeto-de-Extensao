@@ -4,7 +4,7 @@ Sistema web para a venda de atividades (listas de exercícios, revisões e outro
 
 Projeto desenvolvido na disciplina **Atividades Curriculares de Extensão I**, do curso de **Tecnologia em Análise e Desenvolvimento de Sistemas** do **IFPR – Campus Telêmaco Borba**.
 
-> 🚧 **Status:** em desenvolvimento (fase de levantamento de requisitos e definição do ambiente).
+> 🚧 **Status:** em desenvolvimento (fase de implementação).
 
 ---
 
