@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\loginController;
 use App\Http\Controllers\materiaisController;
 use App\Http\Controllers\testesController;
+use App\Http\Controllers\DashboardController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -32,3 +33,16 @@ route::middleware('guest')->group(function () {
 
 
 
+route::middleware('auth')->group(function () {
+    route::post('/logout', [loginController::class, 'logout'])->name('logout');
+});
+
+
+//invoca controller da dashboard, com autenticação
+Route::get('/dashboard', DashboardController::class)
+    ->middleware('auth')
+    ->name('dashboard');
+
+Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
+    // rotas de materiais e vendas da professora
+});
