@@ -67,7 +67,7 @@
 
                                 <p class="text-center mb-0">
                                     Ainda não possui cadastro?
-                                    <a href="#" class="fw-bold text-success">
+                                    <a href="{{ route('cadastroUsuario') }}" class="fw-bold text-success">
                                         Clique aqui!
                                     </a>
                                 </p>
