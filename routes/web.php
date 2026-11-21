@@ -28,15 +28,13 @@ route::middleware('guest')->group(function () {
     //route::post('/testes', [testesController::class, 'testes']);
 });
 
-
-    
-
-
-
+//rota logout
 route::middleware('auth')->group(function () {
     route::post('/logout', [loginController::class, 'logout'])->name('logout');
 });
 
+//rota materiais visivel também para usuários não autenticados
+Route::get('/materiais', [materiaisController::class, 'materiais'])->name('TelaMateriais');
 
 //invoca controller da dashboard, com autenticação
 Route::get('/dashboard', DashboardController::class)

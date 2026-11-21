@@ -11,7 +11,7 @@
         <div class="collapse navbar-collapse" id="menuPrincipal">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" href="{{ url('/') }}">Catálogo</a>
+                    <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" href="{{ url('materiais') }}">Catálogo</a>
                 </li>
 
                 @auth
