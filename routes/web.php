@@ -6,6 +6,7 @@ use App\Http\Controllers\loginController;
 use App\Http\Controllers\materiaisController;
 use App\Http\Controllers\testesController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\CadastroMaterialController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -41,6 +42,16 @@ Route::get('/dashboard', DashboardController::class)
     ->middleware('auth')
     ->name('dashboard');
 
+// rotas de materiais e vendas da professora
 Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
-    // rotas de materiais e vendas da professora
+    Route::get('/cadastroMaterial', [
+        CadastroMaterialController::class,
+        'formCadastroMaterial'
+    ])->name('cadastroMaterial');
 });
+
+// ROTA TEMPORÁRIA PARA VISUALIZAÇÃO
+Route::get('/preview-cadastroMaterial', [
+    CadastroMaterialController::class,
+    'formCadastroMaterial'
+])->name('previewCadastroMaterial');
