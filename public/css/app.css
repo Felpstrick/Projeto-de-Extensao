@@ -487,3 +487,164 @@
     }
 }
 
+
+/* =================================
+   CADASTRO DE MATERIAIS
+================================= */
+
+.cadastro-material {
+    padding: 15px 0 35px;
+}
+
+/* Menu lateral */
+
+.menu-cadastro {
+    background-color: rgb(168, 192, 168);
+    border-radius: 12px;
+    padding: 22px 14px;
+    min-height: 420px;
+}
+
+.menu-titulo {
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #526452;
+    margin-bottom: 22px;
+    padding-left: 10px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #405340;
+    padding: 11px 10px;
+    border-radius: 7px;
+    font-size: 14px;
+    margin-bottom: 5px;
+    transition: 0.2s;
+}
+
+.menu-item:hover,
+.menu-item.ativo {
+    background-color: rgba(255, 255, 255, 0.65);
+    color: #344734;
+}
+
+.menu-item i {
+    font-size: 17px;
+}
+
+/* Cabeçalho */
+
+.cabecalho-cadastro {
+    margin-bottom: 25px;
+}
+
+.subtitulo-cadastro {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: #879487;
+    font-weight: 600;
+}
+
+.cabecalho-cadastro h2 {
+    color: #3D503D;
+    font-size: 27px;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+.cabecalho-cadastro p {
+    color: #777;
+    font-size: 14px;
+}
+
+/* Área do formulário */
+
+.conteudo-formulario {
+    background-color: #fff;
+    border: 1px solid #e9ece8;
+    border-radius: 12px;
+    padding: 28px;
+    min-height: 300px;
+}
+
+.conteudo-formulario h5 {
+    color: #405340;
+    font-weight: 600;
+}
+
+
+/* SEÇÕES DO FORMULÁRIO */
+
+.formulario-secao {
+    padding: 12px 0;
+    margin-bottom: 12px;
+}
+
+.secao-titulo {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 24px;
+}
+
+.secao-titulo > i {
+    font-size: 23px;
+    color: #5B6D5B;
+    background-color: #EEF2EC;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.secao-titulo h5 {
+    margin: 0 0 4px;
+    color: #405340;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.secao-titulo p {
+    margin: 0;
+    color: #899389;
+    font-size: 13px;
+}
+
+.conteudo-formulario .form-label {
+    color: #495649;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.conteudo-formulario .form-control {
+    border: 1px solid #dfe5dd;
+    border-radius: 7px;
+    padding: 11px 13px;
+    font-size: 14px;
+}
+
+.conteudo-formulario .form-control:focus {
+    border-color: #A8C0A8;
+    box-shadow: 0 0 0 0.2rem rgba(168, 192, 168, 0.2);
+}
+
+.conteudo-formulario hr {
+    border-color: #e9eee7;
+    margin: 25px 0;
+}
+
+.btn-salvar-material {
+    background-color: #5B6D5B;
+    color: white;
+    border: none;
+    padding: 11px 22px;
+    border-radius: 7px;
+    font-size: 14px;
+}
+
+.btn-salvar-material:hover {
+    background-color: #465846;
+    color: white;
+}
